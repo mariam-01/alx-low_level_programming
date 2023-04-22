@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-* main -  I call the alphabet game
+* main -  Smile in the mirror
 * Return: Always 0 (Success)
 */
 int main(void)
 {
 int i;
 char A[26] = "abcdefghijklmnopqrstuvwxyz";
-for (i = 0; i < 26; i++)
+for (i = 26; i > 0; i--)
 {
 putchar(A[i]);
 }

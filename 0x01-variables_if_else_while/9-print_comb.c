@@ -1,16 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-* main -  I call the alphabet game
+* main - Patience, persistence and perspiration
 * Return: Always 0 (Success)
 */
 int main(void)
 {
 int i;
-char A[26] = "abcdefghijklmnopqrstuvwxyz";
-for (i = 0; i < 26; i++)
+for (i = 48; i < 58; i++)
 {
-putchar(A[i]);
+putchar(i);
+if (i != 57)
+{
+putchar(',');
+putchar(' ');
+}
 }
 putchar('\n');
 return (0);
