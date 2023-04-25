@@ -1,24 +1,24 @@
+#include <stdio.h>
 #include <stdlib.h>
-
 /**
- * main - prints all possible combinations of two two-digit numbers
- * Return: Always 0 (Success)
- */
+* main - The success combination in business
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
-int num1, num2;
-for (num1 = 0; num1 < 100; num1++)
+int i, j;
+for (i = 0; i < 100; i++)
 {
-for (num2 = num1; num2 < 100; num2++)
+for (j = 0; j < 100; j++)
 {
-if (num1 != num2)
+   if (i < j)
 {
-putchar(num1 / 10 + '0');
-putchar(num1 % 10 + '0');
+putchar((i / 10) + 48);
+putchar((i % 10) + 48);
 putchar(' ');
-putchar(num2 / 10 + '0');
-putchar(num2 % 10 + '0');
-if (num1 != 98 || num2 != 99)
+putchar((i / 10) + 48);
+putchar((i % 10) + 48);
+if (i != 98 || j != 99)
 {
 putchar(',');
 putchar(' ');
