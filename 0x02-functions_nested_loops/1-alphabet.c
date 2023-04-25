@@ -5,7 +5,7 @@
 */
 void print_alphabet(void)
 {
-int i ;
+int i;
 char A[26] = "abcdefghijklmnopqrstuvwxyz";
 for (int i = 0; i < 26; i++)
 {
