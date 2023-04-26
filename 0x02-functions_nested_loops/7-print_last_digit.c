@@ -5,4 +5,14 @@
  * @n: the int to extract the last digit from
  * Return: value of the last digit
  */
-
+int print_last_digit(int n)
+{
+if (n >= 0)
+{
+return (n % 10);
+}
+else
+{
+return (-n % 10);
+}
+}
