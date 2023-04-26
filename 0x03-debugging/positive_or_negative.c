@@ -1,11 +1,10 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include "main.h"
 /**
-* main - Positive anything is better than negative n
+* positive_or_negative - Positive zero negative
+* @n: the int to check
 * Return: Always 0 (Success)
 */
-int main(void)
+void positive_or_negative(int n)
 {
 int n;
 srand(time(0));
@@ -22,5 +21,4 @@ else
 {
 printf("%d is negative\n", n);
 }
-return (0);
 }
