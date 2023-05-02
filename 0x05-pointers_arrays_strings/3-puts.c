@@ -4,7 +4,7 @@
  * _puts -  prints a string
  * @str: string
  */
-void print_rev(char *s)
+void _puts(char *s)
 {
 while (*str != '\0')
 {
