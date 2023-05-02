@@ -4,7 +4,11 @@
  * _puts -  prints a string
  * @str: string
  */
-void _puts(char *str)
+void print_rev(char *s)
 {
-printf("%s\n", str);
+while (*str != '\0')
+{
+_putchar(*str++);
+}
+_putchar('\n');
 }
