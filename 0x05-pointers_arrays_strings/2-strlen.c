@@ -1,10 +1,9 @@
 #include <string.h>
 #include "main.h"
 /**
- * _strlen - print string length
- *
- *@s: number two
- * return: length
+ * _strlen - returns string length
+ * @s: string
+ * Return : length
  */
 int _strlen(char *s)
 {
