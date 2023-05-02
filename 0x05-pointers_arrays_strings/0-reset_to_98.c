@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * reset_to_98 - print int
+ * reset_to_98 - reset to 98
  *
  *@n: number to be printed
  */
