@@ -1,13 +1,16 @@
-#include "main.h"
+include "main.h"
+#include <time.h>
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strcat - concatenates two strings
+ * _strncat - concatenates two strings
  *@dest: pointer
  *@src: pointer
+ *@n: number of bytes
  * Return: pointer to the resulting string
  */
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 int i, j;
 i = 0;
@@ -15,7 +18,7 @@ while (dest[i])
 {
 i++;
 }
-for (j = 0; src[j]; j++)
+for (j = 0; j < n && src[j] != '\0'; j++)
 {
 dest[i++] = src[j];
 }
