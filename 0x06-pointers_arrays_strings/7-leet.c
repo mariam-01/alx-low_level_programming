@@ -17,11 +17,11 @@ char *d = "43071";
 int i, j;
 for (i = 0; str[i] != '\0'; i++)
 {
-for (j = 0; letter[j] != '\0'; j++)
+for (j = 0; l[j] != '\0'; j++)
 {
-if (str[i] == letter[j] || str[i] == letter[j] + 32)
+if (str[i] == l[j] || str[i] == l[j] + 32)
 {
-str[i] = digit[j];
+str[i] = d[j];
 break;
 }
 }
