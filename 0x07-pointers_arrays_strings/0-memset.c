@@ -3,10 +3,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _memset - adds two numbers
+ * _memset -  fills memory with a constant byte
  *@s: pointer
  *@b: char
- *@n: pointer
+ *@n: number
  *
  * Return: thr result pointer
  */
