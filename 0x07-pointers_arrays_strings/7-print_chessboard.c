@@ -8,7 +8,7 @@
  *
  *
  *
- * Return: a pointer or null
+ * Return: 0
  */
 
 void print_chessboard(char (*a)[8])
