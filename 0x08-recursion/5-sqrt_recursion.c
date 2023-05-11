@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * sqrt - returns the value of the natural square root of a number
+ * sqr - returns the value of the natural square root of a number
  *@n: number
  *@a: number
  *@e: number
