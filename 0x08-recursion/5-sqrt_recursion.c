@@ -10,7 +10,7 @@
  * Return: number
  */
 
-int sqrt(int n, int a, int e)
+int sqr(int n, int a, int e)
 {
 int m, s;
 if (a > e)
@@ -25,11 +25,11 @@ return (m);
 }
 else if (s < n)
 {
-return (sqrt(n, m + 1, e));
+return (sqr(n, m + 1, e));
 }
 else
 {
-return (sqrt(n, a, m - 1));
+return (sqr(n, a, m - 1));
 }
 }
 /**
@@ -45,5 +45,5 @@ if (n < 0)
 {
 return (-1);
 }
-return (sqrt(n, 0, n));
+return (sqr(n, 0, n));
 }
