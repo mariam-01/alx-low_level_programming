@@ -21,7 +21,7 @@ return (0);
 }
 else
 {
-return (i_palindrome(s, debut + 1, fin - 1));
+return (_palindrome(s, debut + 1, fin - 1));
 }
 }
 
