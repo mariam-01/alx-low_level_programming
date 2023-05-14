@@ -32,8 +32,9 @@ return (1);
 }
 s += atoi(argv[i]);
 }
-}
+
 printf("%d\n", s);
+}
 return (0);
 }
 
