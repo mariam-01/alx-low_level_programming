@@ -16,10 +16,14 @@ char *_strdup(char *str)
 {
 unsigned int i = 0, l;
 char *a;
+if (str == NULL)
+{
+return (NULL);
+}
 l = 1 + strlen(str);
 a = malloc(l *sizeof(char));
 
-if (str == NULL || l == 0 || a == 0)
+if (l == 0 || a == 0)
 {
 return (NULL);
 }
