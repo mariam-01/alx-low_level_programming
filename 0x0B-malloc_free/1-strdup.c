@@ -19,7 +19,7 @@ char *a;
 l = 1 + strlen(str);
 a = malloc(l *sizeof(char));
 
-if (l == 0 || a == 0)
+if (str == NULL || l == 0 || a == 0)
 {
 return (NULL);
 }
