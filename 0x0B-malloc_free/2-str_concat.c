@@ -18,15 +18,19 @@ unsigned int i = 0, j = 0, l;
 char *a;
 if (s1 == NULL)
 {
-s1 == "";
+s1 = '\0';
 }
 else if (s2 == NULL)
 {
-s2 == "";
+s2 = '\0';
 }
+
 l = 1 + strlen(s1) + strlen(s2);
 a = malloc(l *sizeof(char));
-
+if (a == 0)
+{
+return (NULL);
+}
 
 while (i < strlen(s1))
 {
