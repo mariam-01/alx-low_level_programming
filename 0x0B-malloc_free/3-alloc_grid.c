@@ -34,8 +34,8 @@ if (a[i] == NULL)
 for (j = 0; j < i; j++)
 {
 free(a[j]);
-}
 free(a);
+}
 return (NULL);
 }
 }
