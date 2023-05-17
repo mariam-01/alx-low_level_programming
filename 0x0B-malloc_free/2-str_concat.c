@@ -18,11 +18,11 @@ unsigned int i = 0, j = 0, l;
 char *a;
 if (s1 == NULL)
 {
-s1 = '\0';
+s1 = "\0";
 }
 else if (s2 == NULL)
 {
-s2 = '\0';
+s2 = "\0";
 }
 
 l = 1 + strlen(s1) + strlen(s2);
