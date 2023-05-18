@@ -19,7 +19,8 @@ int *a;
 a = malloc(b);
 if (a == NULL)
 {
-return (98);
+exit(98);
+
 }
 else
 {
