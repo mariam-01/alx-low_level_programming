@@ -55,7 +55,8 @@ if (nb == 1)
 a = (char **)malloc(nb *sizeof(char *));
 if (a == NULL)
 	return (NULL);
-a[nb - 1];
+a[nb - 1] = NULL;
+i = 0;
 while (str[i])
 {
 if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
