@@ -23,6 +23,6 @@ if (a == 0)
 {
 return (NULL);
 }
-memset(ptr, 0, nmemb * size);
+memset(a, 0, nmemb * size);
 return (a);
 }
