@@ -20,16 +20,16 @@ unsigned int i = 0, j = 0, l;
 char *a;
 if (s1 == NULL)
 {
-s1 = "\0";
+s1 = "";
 }
-else if (s2 == NULL)
+if (s2 == NULL)
 {
-s2 = "\0";
+s2 = "";
 }
 
 l = 1 + strlen(s1) + n;
-a = malloc(l *sizeof(char));
-if (a == 0)
+a = malloc(l);
+if (a == NULL)
 {
 return (NULL);
 }
@@ -44,6 +44,6 @@ while (j < n)
 a[i + j] = s2[j];
 j++;
 }
-a[l] = '\0';
+a[i] = '\0';
 return (a);
 }
