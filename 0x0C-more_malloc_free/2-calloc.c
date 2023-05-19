@@ -18,7 +18,7 @@ if (size == 0 || nmemb == 0)
 {
 return (NULL);
 }
-a = malloc(nmemb * sizeof(char));
+a = malloc(nmemb * size);
 if (a == 0)
 {
 return (NULL);
