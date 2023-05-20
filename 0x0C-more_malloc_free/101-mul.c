@@ -20,7 +20,7 @@ return (n * m);
 }
 
 /**
- * validate_input - reallocates a memory block using malloc and free
+ * valid_input - validate the input if it is a number or not
  *@arg: pointer
  * Return: return 1 ,If it fails return 0
 */
