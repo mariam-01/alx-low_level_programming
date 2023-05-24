@@ -1,7 +1,7 @@
 #include "dog.h"
 
 /**
- * init_dog - check the code
+ * init_dog -  initialize a variable of type struct dog
  *@d : structure gog
  *@age : number
  *@name : pointer
@@ -10,8 +10,11 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-d->age = age;
+
+if (d)
+{d->age = age;
 d->name = name;
 d->owner = owner;
 
+}
 }
