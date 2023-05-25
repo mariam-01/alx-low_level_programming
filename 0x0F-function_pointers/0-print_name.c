@@ -3,7 +3,7 @@
 
 
 /**
- * print_name - prints the name of the file it was compiled from
+ * print_name -  prints a name.
  *@name : pointer
  *
  *@f : function
