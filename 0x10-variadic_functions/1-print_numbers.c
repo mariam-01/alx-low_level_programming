@@ -28,6 +28,11 @@ va_start(args, n);
 for (i = 0; i < n - 1; i++)
 {
 a = va_arg(args, int);
+if (separator == NULL)
+{
+separator = "";
+}
+
 printf("%d%s ", a, separator);
 }
 a = va_arg(args, int);
