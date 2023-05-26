@@ -33,7 +33,7 @@ if (separator == NULL)
 separator = "";
 }
 
-printf("%d%s ", a, separator);
+printf("%d%s", a, separator);
 }
 a = va_arg(args, int);
 printf("%d\n", a);
