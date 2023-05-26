@@ -15,9 +15,8 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 va_list args;
-int s = 0, a;
 unsigned int i;
-
+int a;
 if (n == 0)
 {
 printf("\n");
