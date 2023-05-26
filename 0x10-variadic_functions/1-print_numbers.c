@@ -20,7 +20,7 @@ int a;
 if (n == 0)
 {
 printf("\n");
-
+return;
 }
 
 va_start(args, n);
