@@ -33,10 +33,9 @@ printf("%f", va_arg(args, double));
 break;
 case 's':
 s = va_arg(args, char *);
-if (s)
+if (!s)
+	printf("(nil)");
 printf("%s", s);
-else
-printf("(nil)");
 break;
 default:
 i++;
