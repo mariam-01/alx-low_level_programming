@@ -46,7 +46,7 @@ current = current->next;
 }
 current->next = new_node;
 new_node->len = strlen(str);
-*head = new_node;
+
 
 return (new_node);
 }
