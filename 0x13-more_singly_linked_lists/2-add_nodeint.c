@@ -13,10 +13,10 @@
 
 
 
-list_t *add_nodeint(list_t **head, const int n)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
-list_t *new_node;
-new_node = malloc(sizeof(list_t));
+listint_t *new_node;
+new_node = malloc(sizeof(listint_t));
 if (new_node == NULL)
 {
 return (NULL);
