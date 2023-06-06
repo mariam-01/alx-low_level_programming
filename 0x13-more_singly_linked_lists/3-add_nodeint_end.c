@@ -8,7 +8,7 @@
 /**
  *add_nodeint_end -  t adds a new node at the end of a list_t list.
  *@head : struct list_t
- *@str : integer
+ *@n : integer
  * Return: the address of the new element, or NULL if it failed
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
