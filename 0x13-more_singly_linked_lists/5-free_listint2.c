@@ -6,7 +6,7 @@
 #include <string.h>
 
 /**
- * free_listint - Frees a list_t list.
+ * free_listint22 - Frees a list_t list.
  * @head: head of the list.
  */
 void free_listint2(listint_t **head)
