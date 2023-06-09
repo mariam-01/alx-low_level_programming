@@ -7,8 +7,8 @@
 
 /**
  * get_bit - Returns the value of a bit at a given index.
- * @n:  number 
- * @index:  index 
+ * @n:  number
+ * @index:  index
  *
  * Return:  value of the bit , or -1 if it fails
  */
@@ -20,5 +20,3 @@ return (-1);
 }
 return (n >> index & 1);
 }
-
-
