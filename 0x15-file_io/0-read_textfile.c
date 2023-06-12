@@ -4,23 +4,25 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
-
+#include <fcntl.h>
+#include <unistd.h>
 /**
- * get_endianness - Checks the endianness of the system.
- *
- * Return: 0 if big endian, 1 if little endian.
+* read_textfile -  reads a text file and prints it to the standard output.
+ * @filename: The name of the file
+ * @letters: The number of letters to read and print.
+ * Return: number of letters read and printed, or 0 if it fails
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-int *f;
+int f;
 ssize_t r, w;
 char buffer[1024];
 if (!filename || !letters)
 {
 return (0);
 }
-f = fopen(filename, O_RDONLY);
+f = open(filename, O_RDONLY);
 
 if (f == -1)
 {
@@ -28,7 +30,7 @@ return (0);
 }
 
 
-r = read(fd, buffer, sizeof(buffer));
+r = read(f, buffer, sizeof(buffer));
 if (r == -1)
 {
 close(f);
@@ -36,7 +38,7 @@ return (0);
 }
 
 w = write(STDOUT_FILENO, buffer, r);
-if (w == -1 || (size_t)w != r)
+if (w == -1 || w != r)
 {
 close(f);
 return (0);
