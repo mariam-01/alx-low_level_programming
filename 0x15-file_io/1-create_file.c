@@ -4,10 +4,12 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
+#include <fcntl.h>
+#include <unistd.h>
 
 /**
- *create_file -  creates a file.
- * @filename: The name of the file
+ * read_textfile -  creates a file.
+ * @filename: The name of the file 
  * @text_content:  string to write to the file
  * Return: 1 on success, or -1 if it fails
  */
@@ -16,7 +18,7 @@ int create_file(const char *filename, char *text_content)
 {
 int f;
 int i = 0, w = 0;
-char buffer[1024];
+
 if (!filename)
 {
 return (-1);
@@ -29,14 +31,14 @@ return (0);
 }
 if (!text_content)
 {
-while (text_content[len] != '\0')
+while (text_content[i] != '\0')
 {
 i++;
 }
-w = = write(fd, text_content, len);
+w = write(f, text_content, i);
 if (w == -1 || w != i)
 {
-close(fd);
+close(f);
 return (-1);
 }
 
@@ -45,5 +47,3 @@ return (-1);
 close(f);
 return (0);
 }
-
-
