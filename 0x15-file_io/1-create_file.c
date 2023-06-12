@@ -17,8 +17,8 @@
 int create_file(const char *filename, char *text_content)
 {
 int f;
-int i = 0, w = 0;
-
+int l, w = 0;
+l = strlen(text_content);
 if (!filename)
 {
 return (-1);
@@ -29,19 +29,14 @@ if (f == -1)
 {
 return (0);
 }
-if (!text_content)
+if (l)
 {
-while (text_content[i] != '\0')
-{
-i++;
-}
-w = write(f, text_content, i);
-if (w == -1 || w != i)
+w = write(f, text_content, l);
+if (w == -1 || w != l)
 {
 close(f);
 return (-1);
 }
-
 }
 
 close(f);
