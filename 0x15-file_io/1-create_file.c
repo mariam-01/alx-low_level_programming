@@ -8,8 +8,8 @@
 #include <unistd.h>
 
 /**
- * read_textfile -  creates a file.
- * @filename: The name of the file 
+ * create_file -  creates a file.
+ * @filename: The name of the file
  * @text_content:  string to write to the file
  * Return: 1 on success, or -1 if it fails
  */
