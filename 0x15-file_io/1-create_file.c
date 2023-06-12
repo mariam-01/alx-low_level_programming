@@ -27,18 +27,14 @@ f = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 
 if (f == -1)
 {
-return (0);
+return (-1);
 }
 if (l)
 {
 w = write(f, text_content, l);
-if (w == -1 || w != l)
-{
-close(f);
-return (-1);
-}
 }
 
 close(f);
-return (0);
+return (w == l ? 1 : -1);
 }
+
