@@ -32,6 +32,6 @@ return (-1);
 }
 
 close(f);
-return (w == l ? 1 : -1);
+return (1);
 }
 
