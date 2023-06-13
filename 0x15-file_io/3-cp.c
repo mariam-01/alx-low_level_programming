@@ -6,7 +6,7 @@
 #include <string.h>
 #include <fcntl.h>
 #include <unistd.h>
-#define BUF_SIZE 1024
+#define BUFFER_SIZE 1024
 /**
  * main - Copies the content of a file to another file.
  * @argc: The number of command-line arguments.
