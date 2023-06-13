@@ -24,14 +24,11 @@ if (!filename)
 return (-1);
 }
 f = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+w = write(f, text_content, l);
 
-if (f == -1)
+if (f == -1 || w == -1)
 {
 return (-1);
-}
-if (l)
-{
-w = write(f, text_content, l);
 }
 
 close(f);
