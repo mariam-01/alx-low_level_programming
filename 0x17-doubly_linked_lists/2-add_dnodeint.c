@@ -1,40 +1,40 @@
-Write a function that adds a new node at the beginning of a dlistint_t list.
-
-Prototype: dlistint_t *add_dnodeint(dlistint_t **head, const int n);
-Return: the address of the new element, or NULL if it failed
-julien@ubuntu:~/0x17. Doubly linked lists$ cat 2-main.c 
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
- * main - check the code
+ * add_dnodeint_end - Add a new node at the end of a doubly linked list.
+ * @head: Pointer to a pointer to the head of the list.
+ * @n: Value to be stored in the new node.
  *
- * Return: Always EXIT_SUCCESS.
+ * Return: Address of the new node, or NULL if it failed.
  */
-int main(void)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-    dlistint_t *head;
+    dlistint_t *new_node, *current;
 
-    head = NULL;
-    add_dnodeint(&head, 0);
-    add_dnodeint(&head, 1);
-    add_dnodeint(&head, 2);
-    add_dnodeint(&head, 3);
-    add_dnodeint(&head, 4);
-    add_dnodeint(&head, 98);
-    add_dnodeint(&head, 402);
-    add_dnodeint(&head, 1024);
-    print_dlistint(head);
-    return (EXIT_SUCCESS);
+    if (head == NULL)
+        return (NULL);
+
+    new_node = malloc(sizeof(dlistint_t));
+    if (new_node == NULL)
+        return (NULL);
+
+    new_node->n = n;
+    new_node->next = NULL;
+
+    if (*head == NULL)
+    {
+        new_node->prev = NULL;
+        *head = new_node;
+    }
+    else
+    {
+        current = *head;
+        while (current->next != NULL)
+            current = current->next;
+
+        current->next = new_node;
+        new_node->prev = current;
+    }
+
+    return (new_node);
 }
-julien@ubuntu:~/0x17. Doubly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-add_dnodeint.c 0-print_dlistint.c -o c
-julien@ubuntu:~/0x17. Doubly linked lists$ ./c 
-1024
-402
-98
-4
-3
-2
-1
