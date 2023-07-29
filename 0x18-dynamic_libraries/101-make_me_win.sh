@@ -1,11 +1,3 @@
 #!/bin/bash
-
-# Step 1: Generate combinations and write to file
-python3 generate_combinations.py
-
-# Step 2: Read the first line from the combinations file and run Giga Millions program
-combination=$(head -n 1 combinations.txt)
-./gm $combination
-
-# Step 3: Remove the combinations file (optional, but to clean up)
-rm combinations.txt
+python3 -c "from itertools import*;open('c','w').writelines([' '.join(map(str,c))+' 9\n'for c in product(range(1,76),repeat=5)])"
+./gm $(head -n1 c); rm c
